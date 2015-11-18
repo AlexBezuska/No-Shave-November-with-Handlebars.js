@@ -5,31 +5,22 @@
   <meta name="viewport" content="width=1024" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>No Shave November with Handlebars.js - Alex Bezuska</title>
-  
   <meta name="description" content="" />
   <meta name="author" content="Alex Bezuska" />
-
   <link href="css/main.css" rel="stylesheet" />
-  
-  <script src="js/handlebars.js"></script>
-  
-  <link rel="stylesheet" href="node_modules/highlight.js/styles/monokai.css">
-  <script src="node_modules/highlight.js/lib/highlight.js"></script>
-  <script>hljs.initHighlighting.called = false;
-hljs.initHighlighting();</script>
 </head>
 
 
 <body class="impress-not-supported">
-  
+
   <div id="impress">
-    
+
     <div id="bored" class="step slide slide1" data-x="-1000" data-y="-1500">
       <h1> No Shave November</h1>
       <h2> <em> with</em> Handlebars.js</h2>
       <img src="img/handlebars_logo.svg"/>
     </div>
-    
+
     <div class="step slide slide2" data-x="0" data-y="-1500">
       <p>About the presenter:</p>
       <h1>Alex Bezuska</h1>
@@ -46,86 +37,51 @@ hljs.initHighlighting();</script>
         <li>JSLou</li>
       </ul>
     </div>
-    
+
     <div class="step slide slide3" data-x="1000" data-y="-1500">
       <h1>So what does handlebars do?</h1>
       <p>Handlebars is a JavaScript templating system that lets you write less HTML and stop repeating yourself!</p>
       <p>Handlebars uses moustache templates</p>
       <h3>Insert your content {{here}}!</h3>
-      
+
     </div>
-    
-    
-    
-    
+
     <div class="step slide slide4" data-x="2000" data-y="-1500">
       <p>Who is it for?</p>
       <p>Anyone who has to display a lot of data, or data that changes or is an unpredictable amount of data.</p>
-      <p>Ex. blog</p>  
+      <p>Ex. blog</p>
     </div>
-    
+
     <div class="step slide slide5" data-x="3000" data-y="-1500">
-      <h4>Template:</h4>
-    <pre>
-      <code class="html hljs">
-          <script id="template" type="text/x-handlebars-template">
-            <strong> Game:</strong> {{game}}<br/>
-            <strong> Developer:</strong> {{developer}}
-          </script>
-        </code>
-      </pre>
-      <h4>JavaScript:</h4>
-      <pre>
-        <code class="js hljs">
-          var templateSource = document.getElementById('template').innerHTML;
-          var template = Handlebars.compile(templateSource);
-          var resultsPlaceholder = document.getElementById('-results');
-          var data = {
-            "game": "Papers please",
-            "developer": "Lucas Pope"
-          };
-          resultsPlaceholder.innerHTML = template(data);
-        </code>
-      </pre>
-      
+
     </div>
-    
-    
 
     <div class="step slide slide6" data-x="4000" data-y="-1500">
-      <h4> Retults:</h4>
-      <p id="slide6-results"></p>
-      
-      <script id="slide6-template" type="text/x-handlebars-template">
-        <strong> Game:</strong> {{game}}<br/>
-        <strong> Developer:</strong> {{developer}}
-      </script>
-      
-      <script src="js/slide6.js"></script>
+
     </div>
-    
-    
-    
-    <div class="step slide" data-x="5000" data-y="-1500">
-      <p>frontend Example two:</p>
-      <p> list of people </p>
-      <p>name title website twitter</p>
+
+    <div class="step slide slide7" data-x="5000" data-y="-1500">
+
     </div>
-    
-    
-    
-    
-    
+
+    <div class="step slide slide8" data-x="6000" data-y="-1500">
+
+    </div>
+
+
+
+
+
   </div>
-  
+
   <script>
-  if ("ontouchstart" in document.documentElement) { 
+  if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
   }
   </script>
-  
+
   <script src="js/impress.js"></script>
   <script>impress().init();</script>
-  
+
 </body>
 </html>

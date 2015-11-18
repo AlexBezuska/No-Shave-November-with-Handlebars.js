@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <link rel="stylesheet" href="../../css/examples.css">
+        <script src="../../js/handlebars.js"></script>
+    </head>
+    <body>
+
+      <div id="results"></div>
+
+      <script id="template" type="text/x-handlebars-template">
+        <strong> Game:</strong> {{game}}<br/>
+        <strong> Developer:</strong> {{developer}}
+      </script>
+
+
+      <script>
+        var templateSource = document.getElementById('template').innerHTML;
+
+        var template = Handlebars.compile(templateSource);
+
+        var resultsPlaceholder = document.getElementById('results');
+
+        var data = {
+            "game": "Papers please",
+            "developer": "Lucas Pope"
+        };
+
+        resultsPlaceholder.innerHTML = template(data);
+      </script>
+    </body>
+</html>

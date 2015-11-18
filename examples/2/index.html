@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../../css/examples.css">
+  <script src="../../js/handlebars.js"></script>
+</head>
+<body>
+
+  <h1>Developers</h1>
+
+  <ul id="developers"></ul>
+
+  <script id="template" type="text/x-handlebars-template">
+    {{#each this}}
+    <li>
+      <a href="https://twitter.com/{{twitter}}">{{firstname}} {{lastname}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+
+  <script>
+  var templateSource = document.getElementById('template').innerHTML;
+
+  var template = Handlebars.compile(templateSource);
+
+  var resultsPlaceholder = document.getElementById('developers');
+
+  var developers = [
+    {
+      "firstname": "Lucas",
+      "lastname": "Pope",
+      "twitter": "@dukope"
+    },
+    {
+      "firstname": "Mike",
+      "lastname": "Bithell",
+      "twitter": "@mikeBithell"
+    },
+    {
+      "firstname": "Erin",
+      "lastname": "Robinson",
+      "twitter": "@livelyivy"
+    },
+    {
+      "firstname": "Christine",
+      "lastname": "Love",
+      "twitter": "@christinelove"
+    },
+    {
+      "firstname": "Liselore",
+      "lastname": "Goedhart",
+      "twitter": "@lizzywanders"
+    },
+    {
+      "firstname": "Sos",
+      "lastname": "Sosowski",
+      "twitter": "@Sosowski"
+    },
+    {
+      "firstname": "Lucy",
+      "lastname": "Morris",
+      "twitter": "@lucyamorris"
+    }
+  ];
+
+  resultsPlaceholder.innerHTML = template(developers);
+
+
+
+  </script>
+</body>
+</html>
