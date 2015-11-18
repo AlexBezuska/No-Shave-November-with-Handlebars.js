@@ -6,16 +6,22 @@
 </head>
 <body>
   
-  <h1>Developers (sorted)</h1>
+  <h1>Indie Game Developers</h1>
   
-  <ul id="developers"></ul>
+  <div id="developers" class="row"></div>
   
   <script id="template" type="text/x-handlebars-template">
     {{#sort developers}}
     {{#each this}}
-    <li>
-      <a href="https://twitter.com/{{twitter}}">{{firstname}} {{lastname}}</a>
-    </li>
+    <div class="col1-3">
+      <div class="developer module">
+        <h2>{{firstname}} {{lastname}}</h2>
+        <p><strong>Twitter:</strong> <a href="https://twitter.com/{{twitter}}">{{twitter}}</a></p>
+        {{#if game}}
+        <p><strong>Game:</strong> <a href="{{game.link}}">{{game.name}}</a></p>
+        {{/if}}
+      </div>
+    </div>
     {{/each}}
     {{/sort}}
   </script>
@@ -43,7 +49,11 @@
       {
         "firstname": "Lucas",
         "lastname": "Pope",
-        "twitter": "@dukope"
+        "twitter": "@dukope",
+        "game": { 
+          "name": "Papers Please",
+          "link": "http://papersplea.se/"
+        }
       },
       {
         "firstname": "Mike",

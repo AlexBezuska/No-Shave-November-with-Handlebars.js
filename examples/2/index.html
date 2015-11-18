@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="../../css/examples.css">
-  <script src="../../js/handlebars.js"></script>
+  <link rel="stylesheet" href="../css/examples.css">
+  <script src="../js/handlebars.js"></script>
 </head>
 <body>
-
+  
   <h1>Developers</h1>
-
+  
   <ul id="developers"></ul>
-
+  
   <script id="template" type="text/x-handlebars-template">
     {{#each this}}
     <li>
@@ -17,15 +17,15 @@
     </li>
     {{/each}}
   </script>
-
-
+  
+  
   <script>
   var templateSource = document.getElementById('template').innerHTML;
-
+  
   var template = Handlebars.compile(templateSource);
-
+  
   var resultsPlaceholder = document.getElementById('developers');
-
+  
   var developers = [
     {
       "firstname": "Lucas",
@@ -63,11 +63,11 @@
       "twitter": "@lucyamorris"
     }
   ];
-
+  
   resultsPlaceholder.innerHTML = template(developers);
-
-
-
+  
+  
+  
   </script>
 </body>
 </html>
